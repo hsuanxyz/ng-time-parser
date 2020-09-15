@@ -1,0 +1,29 @@
+{
+  "name": "ng-time-parser",
+  "version": "0.0.1",
+  "description": "Time deserialization with Angular date pipe format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsuanxyz/ng-time-parser.git"
+  },
+  "keywords": [
+    "ng",
+    "Angular",
+    "date-pipe",
+    "time",
+    "parser"
+  ],
+  "author": "Hsuan Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hsuanxyz/ng-time-parser/issues"
+  },
+  "homepage": "https://github.com/hsuanxyz/ng-time-parser#readme",
+  "dependencies": {
+    "@angular/common": "^10.0.4"
+  }
+}
