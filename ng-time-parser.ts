@@ -36,14 +36,18 @@ export class NgTimeParser {
         period = this.getAbbreviatedDayPeriods().indexOf(match[this.matchMap.periodAbbreviated + 1]) as 0 | 1
       }
       return {
-        hour:  match[this.matchMap.hour + 1] ? Number.parseInt(match[this.matchMap.hour + 1], 10) : null,
-        minute: match[this.matchMap.minute + 1] ? Number.parseInt(match[this.matchMap.minute + 1], 10) : null,
-        second: match[this.matchMap.second + 1] ? Number.parseInt(match[this.matchMap.second + 1], 10) : null,
+        hour:  this.getMatchItemAtIndex(match, this.matchMap.hour),
+        minute: this.getMatchItemAtIndex(match, this.matchMap.minute),
+        second: this.getMatchItemAtIndex(match, this.matchMap.second),
         period
       }
     } else {
       return null;
     }
+  }
+
+  private getMatchItemAtIndex(match: RegExpExecArray, index: number): number | null {
+    return index !== -1 ? Number.parseInt(match[index + 1], 10) : null;
   }
 
   private genRegexp(): void {
