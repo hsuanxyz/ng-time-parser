@@ -26,11 +26,10 @@ console.log(parser4.getTime('0(22) 23'))
 
 ```typescript
 interface TimeParserResult {
-  hour: number;
-  minute: number;
-  second: number;
-  // -1: noop; 0: AM; 1: PM
-  period: number;
+  hour: number | null;
+  minute: number | null;
+  second: number | null;
+  period: number;  // 0: AM; 1: PM
 }
 ```
 
